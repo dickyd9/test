@@ -1,0 +1,36 @@
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Add Bank
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Bank</th>
+                        <th>Nomor Rekening</th>
+                        <th>Nama</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < bank.length; i++){ %> 
+                    <tr>
+                        <td> <%= i + 1 %></td>
+                        <td> <%= bank[i].nameBank %></td>
+                        <td> <%= bank[i].nomorRekening %></td>
+                        <td> <%= bank[i].name %></td>
+                        <td>
+                            <button class="btn btn-success">Edit</button>    
+                        </td>
+                    </tr>
+                    <% } %> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
